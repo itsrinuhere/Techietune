@@ -24,7 +24,7 @@ public class Oauth extends HttpServlet{
 		
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+
 			e.printStackTrace();
 		}
 	}
