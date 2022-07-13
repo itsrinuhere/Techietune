@@ -1,0 +1,117 @@
+Microsoft Windows [Version 10.0.22000.739]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\harish sriramula>heroku log --tails --app studentlibo
+ »   Warning: log is not a heroku command.
+Did you mean logs? [y/n]: y
+ »   Error: Unexpected argument: --tails
+ »   See more help with --help
+
+C:\Users\harish sriramula>heroku --tails --app studentlibo
+ »   Warning: --tails is not a heroku command.
+Did you mean drains? [y/n]: n
+ »   Error: Run heroku help for a list of available commands.
+
+C:\Users\harish sriramula>heroku logs --app studentlibo
+2022-07-06T07:22:09.440429+00:00 app[web.1]: at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+2022-07-06T07:22:09.440429+00:00 app[web.1]: at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+2022-07-06T07:22:09.440429+00:00 app[web.1]: at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+2022-07-06T07:22:09.440430+00:00 app[web.1]: at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+2022-07-06T07:22:09.440430+00:00 app[web.1]: at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+2022-07-06T07:22:09.440430+00:00 app[web.1]: at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+2022-07-06T07:22:09.440431+00:00 app[web.1]: at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+2022-07-06T07:22:09.440431+00:00 app[web.1]: at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+2022-07-06T07:22:09.440431+00:00 app[web.1]: at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+2022-07-06T07:22:09.440431+00:00 app[web.1]: at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1598)
+2022-07-06T07:22:09.440432+00:00 app[web.1]: at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+2022-07-06T07:22:09.440432+00:00 app[web.1]: at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+2022-07-06T07:22:09.440432+00:00 app[web.1]: at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+2022-07-06T07:22:09.440433+00:00 app[web.1]: at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+2022-07-06T07:22:09.440433+00:00 app[web.1]: at java.base/java.lang.Thread.run(Thread.java:833)
+2022-07-06T07:22:09.440434+00:00 app[web.1]:
+2022-07-06T07:22:14.939078+00:00 heroku[router]: at=info method=GET path="/search" host=studentlibo.herokuapp.com request_id=bc759afb-4a2e-4070-ab22-d8435d8c3ddf fwd="223.182.4.49" dyno=web.1 connect=0ms service=5ms status=200 bytes=5135 protocol=https
+2022-07-06T07:22:20.795620+00:00 heroku[router]: at=info method=GET path="/search" host=studentlibo.herokuapp.com request_id=189f9289-a0ad-44a5-9621-fc2f7b79179f fwd="223.182.4.49" dyno=web.1 connect=0ms service=2ms status=200 bytes=5135 protocol=https
+2022-07-06T07:22:21.408189+00:00 heroku[router]: at=info method=GET path="/assets/img/blog/blog-recent-1.jpg" host=studentlibo.herokuapp.com request_id=155a4da6-2d25-40df-8802-3079ab47f323 fwd="223.182.4.49" dyno=web.1 connect=0ms service=1ms status=404 bytes=909 protocol=https
+2022-07-06T07:22:30.189109+00:00 heroku[router]: at=info method=GET path="/login" host=studentlibo.herokuapp.com request_id=077ed0c4-9c1b-4c9c-89a3-d586a2d01b05 fwd="223.182.4.49" dyno=web.1 connect=0ms service=63ms status=200 bytes=3913 protocol=https
+2022-07-06T07:22:32.893118+00:00 heroku[router]: at=info method=GET path="/cdn-cgi/zaraz/s.js?z=JTdCJTIyZXhlY3V0ZWQlMjIlM0ElNUIlNUQlMkMlMjJ0JTIyJTNBJTIyTG9naW4lMjIlMkMlMjJ4JTIyJTNBMC4wMDIyODkwMjY1NzI3ODQxODA4JTJDJTIydyUyMiUzQTE3MDclMkMlMjJoJTIyJTNBOTYwJTJDJTIyaiUyMiUzQTg1MyUyQyUyMmUlMjIlM0ExNzA3JTJDJTIybCUyMiUzQSUyMmh0dHBzJTNBJTJGJTJGc3R1ZGVudGxpYm8uaGVyb2t1YXBwLmNvbSUyRmxvZ2luJTIyJTJDJTIyciUyMiUzQSUyMmh0dHBzJTNBJTJGJTJGc3R1ZGVudGxpYm8uaGVyb2t1YXBwLmNvbSUyRiUyMiUyQyUyMmslMjIlM0EyNCUyQyUyMm4lMjIlM0ElMjJ3aW5kb3dzLTEyNTIlMjIlMkMlMjJvJTIyJTNBLTMzMCUyQyUyMnElMjIlM0ElNUIlNUQlN0Q=" host=studentlibo.herokuapp.com request_id=caf187f7-0ccc-493f-9f91-d51bdd76d744 fwd="223.182.4.49" dyno=web.1 connect=0ms service=2ms status=404 bytes=890 protocol=https
+2022-07-06T07:22:44.064715+00:00 heroku[router]: at=info method=GET path="/create-account" host=studentlibo.herokuapp.com request_id=eef930ce-ab3d-4073-8742-9807c11d8702 fwd="223.182.4.49" dyno=web.1 connect=0ms service=44ms status=200 bytes=4500 protocol=https
+2022-07-06T07:35:41.411128+00:00 heroku[router]: at=info method=GET path="/" host=studentlibo.herokuapp.com request_id=a5560ac6-6f8c-4696-a119-1a2bb3ec3e6e fwd="106.208.111.198" dyno=web.1 connect=0ms service=3ms status=200 bytes=29310 protocol=http
+2022-07-06T07:35:41.720888+00:00 heroku[router]: at=info method=GET path="/assets/img/portfolio/portfolio.png" host=studentlibo.herokuapp.com request_id=44c9504f-a074-4077-a4aa-83c924ebd865 fwd="106.208.111.198" dyno=web.1 connect=0ms service=2ms status=304 bytes=104 protocol=http
+2022-07-06T07:35:42.048215+00:00 heroku[router]: at=info method=GET path="/assets/img/portfolio/jobnotification.webp" host=studentlibo.herokuapp.com request_id=bd2ad97b-efb3-4b7d-a6ae-0212f1e5fa7d fwd="106.208.111.198" dyno=web.1 connect=0ms service=2ms status=304 bytes=103 protocol=http
+2022-07-06T07:35:42.048416+00:00 heroku[router]: at=info method=GET path="/assets/img/portfolio/digitallibrary.png" host=studentlibo.herokuapp.com request_id=59c29e16-7d6b-415c-8685-a4e3b9a72c1e fwd="106.208.111.198" dyno=web.1 connect=0ms service=1ms status=304 bytes=105 protocol=http
+2022-07-06T07:35:42.151498+00:00 heroku[router]: at=info method=GET path="/assets/img/portfolio/game.png" host=studentlibo.herokuapp.com request_id=654a7ef7-3e8e-4337-abe3-78853ad8a702 fwd="106.208.111.198" dyno=web.1 connect=0ms service=2ms status=404 bytes=905 protocol=http
+2022-07-06T07:35:42.159402+00:00 heroku[router]: at=info method=GET path="/assets/img/portfolio/safe.png" host=studentlibo.herokuapp.com request_id=1adb291d-1a16-49a8-b4e0-24b298fce622 fwd="106.208.111.198" dyno=web.1 connect=0ms service=2ms status=404 bytes=905 protocol=http
+2022-07-06T07:35:42.338006+00:00 heroku[router]: at=info method=GET path="/assets/img/portfolio/submarine.png" host=studentlibo.herokuapp.com request_id=95be52d1-06b1-4578-895d-7f9d174e5045 fwd="106.208.111.198" dyno=web.1 connect=0ms service=1ms status=404 bytes=910 protocol=http
+2022-07-06T07:35:50.132659+00:00 heroku[router]: at=info method=GET path="/login" host=studentlibo.herokuapp.com request_id=79bbb6b4-07e2-43f3-bbbc-d63f4210c034 fwd="106.208.111.198" dyno=web.1 connect=0ms service=1ms status=200 bytes=3913 protocol=http
+2022-07-06T07:35:50.595344+00:00 heroku[router]: at=info method=GET path="/cdn-cgi/zaraz/s.js?z=JTdCJTIyZXhlY3V0ZWQlMjIlM0ElNUIlNUQlMkMlMjJ0JTIyJTNBJTIyTG9naW4lMjIlMkMlMjJ4JTIyJTNBMC45MzM1ODg4MzIxNTgzMDk1JTJDJTIydyUyMiUzQTEyODAlMkMlMjJoJTIyJTNBNzIwJTJDJTIyaiUyMiUzQTYwMSUyQyUyMmUlMjIlM0ExMjgwJTJDJTIybCUyMiUzQSUyMmh0dHAlM0ElMkYlMkZzdHVkZW50bGliby5oZXJva3VhcHAuY29tJTJGbG9naW4lMjIlMkMlMjJyJTIyJTNBJTIyaHR0cCUzQSUyRiUyRnN0dWRlbnRsaWJvLmhlcm9rdWFwcC5jb20lMkYlMjIlMkMlMjJrJTIyJTNBMjQlMkMlMjJuJTIyJTNBJTIyd2luZG93cy0xMjUyJTIyJTJDJTIybyUyMiUzQS0zMzAlMkMlMjJxJTIyJTNBJTVCJTVEJTdE" host=studentlibo.herokuapp.com request_id=08c3816d-2d68-4630-b755-9737c02eb9a3 fwd="106.208.111.198" dyno=web.1 connect=0ms service=2ms status=404 bytes=890 protocol=http
+2022-07-06T07:35:51.155000+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=studentlibo.herokuapp.com request_id=9ce92bb8-8072-44e6-a01a-fdcc14d3c745 fwd="106.208.111.198" dyno=web.1 connect=0ms service=1ms status=404 bytes=875 protocol=http
+2022-07-06T07:35:54.172097+00:00 heroku[router]: at=info method=GET path="/search" host=studentlibo.herokuapp.com request_id=e9fda5f6-11b0-4d65-9d10-9570de2383de fwd="106.208.111.198" dyno=web.1 connect=0ms service=2ms status=200 bytes=5135 protocol=http
+2022-07-06T07:35:54.530990+00:00 heroku[router]: at=info method=GET path="/assets/img/blog/blog-recent-1.jpg" host=studentlibo.herokuapp.com request_id=99cb78b2-731d-4193-a3d1-1cdd6f767963 fwd="106.208.111.198" dyno=web.1 connect=0ms service=1ms status=404 bytes=909 protocol=http
+2022-07-06T07:36:00.274944+00:00 heroku[router]: at=info method=POST path="/search" host=studentlibo.herokuapp.com request_id=1291a50b-4e4c-47e9-a152-01ab1a2c625b fwd="106.208.111.198" dyno=web.1 connect=0ms service=1ms status=200 bytes=136 protocol=http
+2022-07-06T07:36:00.275729+00:00 app[web.1]: Jul 06, 2022 7:36:00 AM org.apache.catalina.core.StandardWrapperValve invoke
+2022-07-06T07:36:00.275738+00:00 app[web.1]: SEVERE: Servlet.service() for servlet [search] in context with path [] threw exception [Servlet execution threw an exception] with root cause
+2022-07-06T07:36:00.275739+00:00 app[web.1]: java.lang.ExceptionInInitializerError: Exception java.lang.ExceptionInInitializerError [in thread "http-nio-9807-exec-6"]
+2022-07-06T07:36:00.275739+00:00 app[web.1]: at com.library.search.HibernateUtil.buildSessionFactory(HibernateUtil.java:27)
+2022-07-06T07:36:00.275740+00:00 app[web.1]: at com.library.search.HibernateUtil.<clinit>(HibernateUtil.java:8)
+2022-07-06T07:36:00.275743+00:00 app[web.1]: at com.library.search.Search.search(Search.java:24)
+2022-07-06T07:36:00.275743+00:00 app[web.1]: at com.library.search.Search.doGet(Search.java:43)
+2022-07-06T07:36:00.275744+00:00 app[web.1]: at com.library.search.Search.doPost(Search.java:20)
+2022-07-06T07:36:00.275744+00:00 app[web.1]: at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+2022-07-06T07:36:00.275744+00:00 app[web.1]: at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+2022-07-06T07:36:00.275746+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+2022-07-06T07:36:00.275747+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+2022-07-06T07:36:00.275747+00:00 app[web.1]: at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+2022-07-06T07:36:00.275747+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+2022-07-06T07:36:00.275748+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+2022-07-06T07:36:00.275748+00:00 app[web.1]: at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+2022-07-06T07:36:00.275748+00:00 app[web.1]: at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+2022-07-06T07:36:00.275749+00:00 app[web.1]: at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+2022-07-06T07:36:00.275749+00:00 app[web.1]: at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+2022-07-06T07:36:00.275749+00:00 app[web.1]: at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+2022-07-06T07:36:00.275750+00:00 app[web.1]: at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+2022-07-06T07:36:00.275750+00:00 app[web.1]: at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+2022-07-06T07:36:00.275750+00:00 app[web.1]: at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+2022-07-06T07:36:00.275751+00:00 app[web.1]: at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+2022-07-06T07:36:00.275751+00:00 app[web.1]: at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+2022-07-06T07:36:00.275751+00:00 app[web.1]: at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1598)
+2022-07-06T07:36:00.275752+00:00 app[web.1]: at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+2022-07-06T07:36:00.275752+00:00 app[web.1]: at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+2022-07-06T07:36:00.275753+00:00 app[web.1]: at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+2022-07-06T07:36:00.275753+00:00 app[web.1]: at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+2022-07-06T07:36:00.275753+00:00 app[web.1]: at java.base/java.lang.Thread.run(Thread.java:833)
+2022-07-06T07:36:00.275754+00:00 app[web.1]:
+2022-07-06T07:36:13.369854+00:00 heroku[router]: at=info method=POST path="/search" host=studentlibo.herokuapp.com request_id=4343f5f3-6275-4d64-86ab-52113f6e2465 fwd="106.208.111.198" dyno=web.1 connect=0ms service=1ms status=200 bytes=136 protocol=http
+2022-07-06T07:36:13.370928+00:00 app[web.1]: Jul 06, 2022 7:36:13 AM org.apache.catalina.core.StandardWrapperValve invoke
+2022-07-06T07:36:13.370940+00:00 app[web.1]: SEVERE: Servlet.service() for servlet [search] in context with path [] threw exception [Servlet execution threw an exception] with root cause
+2022-07-06T07:36:13.370941+00:00 app[web.1]: java.lang.ExceptionInInitializerError: Exception java.lang.ExceptionInInitializerError [in thread "http-nio-9807-exec-6"]
+2022-07-06T07:36:13.370941+00:00 app[web.1]: at com.library.search.HibernateUtil.buildSessionFactory(HibernateUtil.java:27)
+2022-07-06T07:36:13.370942+00:00 app[web.1]: at com.library.search.HibernateUtil.<clinit>(HibernateUtil.java:8)
+2022-07-06T07:36:13.370943+00:00 app[web.1]: at com.library.search.Search.search(Search.java:24)
+2022-07-06T07:36:13.370943+00:00 app[web.1]: at com.library.search.Search.doGet(Search.java:43)
+2022-07-06T07:36:13.370943+00:00 app[web.1]: at com.library.search.Search.doPost(Search.java:20)
+2022-07-06T07:36:13.370944+00:00 app[web.1]: at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+2022-07-06T07:36:13.370944+00:00 app[web.1]: at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+2022-07-06T07:36:13.370951+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+2022-07-06T07:36:13.370952+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+2022-07-06T07:36:13.370952+00:00 app[web.1]: at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+2022-07-06T07:36:13.370952+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+2022-07-06T07:36:13.370953+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+2022-07-06T07:36:13.370953+00:00 app[web.1]: at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+2022-07-06T07:36:13.370953+00:00 app[web.1]: at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+2022-07-06T07:36:13.370954+00:00 app[web.1]: at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+2022-07-06T07:36:13.370954+00:00 app[web.1]: at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+2022-07-06T07:36:13.370954+00:00 app[web.1]: at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+2022-07-06T07:36:13.370955+00:00 app[web.1]: at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+2022-07-06T07:36:13.370955+00:00 app[web.1]: at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+2022-07-06T07:36:13.370955+00:00 app[web.1]: at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+2022-07-06T07:36:13.370956+00:00 app[web.1]: at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+2022-07-06T07:36:13.370956+00:00 app[web.1]: at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+2022-07-06T07:36:13.370957+00:00 app[web.1]: at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1598)
+2022-07-06T07:36:13.370957+00:00 app[web.1]: at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+2022-07-06T07:36:13.370957+00:00 app[web.1]: at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+2022-07-06T07:36:13.370958+00:00 app[web.1]: at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+2022-07-06T07:36:13.370958+00:00 app[web.1]: at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+2022-07-06T07:36:13.370959+00:00 app[web.1]: at java.base/java.lang.Thread.run(Thread.java:833)
+2022-07-06T07:36:13.370959+00:00 app[web.1]:
+
+C:\Users\harish sriramula>
